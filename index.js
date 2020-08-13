@@ -1,9 +1,13 @@
 
 const express = require('express')
+var cors = require('cors')
+
+
 const app = express()
+app.use(cors())
 const port = 8082
 
-app.get('/live', (req, res) => {
+app.get('/', (req, res) => {
   res.send('Alive from 2!')
 })
 
